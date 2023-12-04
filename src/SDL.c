@@ -18,6 +18,7 @@
      misrepresented as being the original software.
   3. This notice may not be removed or altered from any source distribution.
 */
+#include "./Starglue.h"
 #include "./SDL_internal.h"
 
 #if defined(__WIN32__) || defined(__GDK__)
@@ -372,6 +373,7 @@ quit_and_error:
 
 int SDL_Init(Uint32 flags)
 {
+    Starglue_Init();
     return SDL_InitSubSystem(flags);
 }
 
